@@ -5,26 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page 2</title>
-    <link rel="stylesheet" crossorigin href="/test-two/assets/styles-guStct1H.css">
+    <link rel="stylesheet" crossorigin href="/zephyr-vista/assets/styles-DXvopXlS.css">
   </head>
   <body>
     <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
+  <div class="container header__container">
+      <a href="#" class="header__logo">
+          Zephyr<span class="header__logo-accent">Vista</span>
       </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
-      </ul>
-    </nav>
+
+      <nav class="header__nav">
+          <ul class="header__menu">
+              <li class="header__item"><a href="#" class="header__link">Главная</a></li>
+              <li class="header__item"><a href="#about" class="header__link">О платформе</a></li>
+              <li class="header__item"><a href="#solutions" class="header__link">Решения</a></li>
+              <li class="header__item"><a href="#innovations" class="header__link">Инновации</a></li>
+              <li class="header__item"><a href="#blog" class="header__link">Блог</a></li>
+          </ul>
+      </nav>
+
+      <div class="header__actions">
+          <a href="#contact" class="btn btn--primary header__btn">Связаться</a>
+          <button class="header__burger" aria-label="Открыть меню">
+              <i class="fa-solid fa-bars"></i>
+          </button>
+      </div>
+  </div>
+
+  <div class="mobile-menu">
+      <div class="mobile-menu__content">
+          <button class="mobile-menu__close" aria-label="Закрыть меню">
+              <i class="fa-solid fa-xmark"></i>
+          </button>
+          <ul class="mobile-menu__list">
+              <li><a href="#" class="mobile-menu__link">Главная</a></li>
+              <li><a href="#about" class="mobile-menu__link">О платформе</a></li>
+              <li><a href="#solutions" class="mobile-menu__link">Решения</a></li>
+              <li><a href="#innovations" class="mobile-menu__link">Инновации</a></li>
+              <li><a href="#blog" class="mobile-menu__link">Блог</a></li>
+              <li><a href="#contact" class="mobile-menu__link mobile-menu__link--cta">Связаться</a></li>
+          </ul>
+      </div>
   </div>
 </header>
 
@@ -39,19 +60,60 @@
 
     <footer class="footer">
   <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
-      </a>
-    </p>
+      <div class="footer__grid">
+
+          <div class="footer__col">
+              <a href="#" class="footer__logo">
+                  Zephyr<span class="footer__logo-accent">Vista</span>
+              </a>
+              <p class="footer__desc">
+                  Технологии нового поколения для автоматизации бизнеса.
+                  Экспертная поддержка на всех этапах внедрения AI.
+              </p>
+              <ul class="footer__contacts">
+                  <li>
+                      <i class="fa-solid fa-location-dot"></i>
+                      <span>14 Wharf Road, London, N1 7RW, UK</span>
+                  </li>
+                  <li>
+                      <i class="fa-solid fa-phone"></i>
+                      <a href="tel:+442012345678">+44 20 1234 5678</a>
+                  </li>
+                  <li>
+                      <i class="fa-solid fa-envelope"></i>
+                      <a href="mailto:hello@zephyr-vista.click">hello@zephyr-vista.click</a>
+                  </li>
+              </ul>
+          </div>
+
+          <div class="footer__col">
+              <h3 class="footer__title">Навигация</h3>
+              <ul class="footer__nav">
+                  <li><a href="#" class="footer__link">Главная</a></li>
+                  <li><a href="#solutions" class="footer__link">Решения для бизнеса</a></li>
+                  <li><a href="#innovations" class="footer__link">AI Технологии</a></li>
+                  <li><a href="#blog" class="footer__link">Блог разработки</a></li>
+                  <li><a href="#contact" class="footer__link">Получить консультацию</a></li>
+              </ul>
+          </div>
+
+          <div class="footer__col">
+              <h3 class="footer__title">Правовая информация</h3>
+              <ul class="footer__legal">
+                  <li><a href="privacy.html" class="footer__link-legal">Политика конфиденциальности</a></li>
+                  <li><a href="cookies.html" class="footer__link-legal">Cookie политика</a></li>
+                  <li><a href="terms.html" class="footer__link-legal">Условия использования</a></li>
+                  <li><a href="return.html" class="footer__link-legal">Политика возврата</a></li>
+                  <li><a href="disclaimer.html" class="footer__link-legal">Отказ от ответственности</a></li>
+                  <li><a href="personal-data-policy.html" class="footer__link-legal">Обработка данных</a></li>
+              </ul>
+          </div>
+      </div>
+
+      <div class="footer__bottom">
+          <p>&copy; 2025 Zephyr-Vista. Все права защищены. Платформа уже доступна в Европе.</p>
+      </div>
   </div>
 </footer>
-
   </body>
 </html>

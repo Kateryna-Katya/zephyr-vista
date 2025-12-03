@@ -1,56 +1,441 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/test-two/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <script type="module" crossorigin src="/test-two/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/test-two/assets/styles-guStct1H.css">
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zephyr-Vista | Разработка интеллектуальных ботов и AI-решений</title>
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%234F46E5'/%3E%3Cpath d='M44 20H20V26L36 44H20V50H44V44L28 26H44V20Z' fill='white'/%3E%3Ccircle cx='20' cy='20' r='4' fill='%232DD4BF'/%3E%3Ccircle cx='44' cy='50' r='4' fill='%232DD4BF'/%3E%3Ccircle cx='44' cy='20' r='3' fill='white' opacity='0.5'/%3E%3Ccircle cx='20' cy='50' r='3' fill='white' opacity='0.5'/%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script type="module" crossorigin src="/zephyr-vista/index.js"></script>
+    <link rel="stylesheet" crossorigin href="/zephyr-vista/assets/styles-DXvopXlS.css">
   </head>
   <body>
     <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
+  <div class="container header__container">
+      <a href="#" class="header__logo">
+          Zephyr<span class="header__logo-accent">Vista</span>
       </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
-      </ul>
-    </nav>
+
+      <nav class="header__nav">
+          <ul class="header__menu">
+              <li class="header__item"><a href="#" class="header__link">Главная</a></li>
+              <li class="header__item"><a href="#about" class="header__link">О платформе</a></li>
+              <li class="header__item"><a href="#solutions" class="header__link">Решения</a></li>
+              <li class="header__item"><a href="#innovations" class="header__link">Инновации</a></li>
+              <li class="header__item"><a href="#blog" class="header__link">Блог</a></li>
+          </ul>
+      </nav>
+
+      <div class="header__actions">
+          <a href="#contact" class="btn btn--primary header__btn">Связаться</a>
+          <button class="header__burger" aria-label="Открыть меню">
+              <i class="fa-solid fa-bars"></i>
+          </button>
+      </div>
+  </div>
+
+  <div class="mobile-menu">
+      <div class="mobile-menu__content">
+          <button class="mobile-menu__close" aria-label="Закрыть меню">
+              <i class="fa-solid fa-xmark"></i>
+          </button>
+          <ul class="mobile-menu__list">
+              <li><a href="#" class="mobile-menu__link">Главная</a></li>
+              <li><a href="#about" class="mobile-menu__link">О платформе</a></li>
+              <li><a href="#solutions" class="mobile-menu__link">Решения</a></li>
+              <li><a href="#innovations" class="mobile-menu__link">Инновации</a></li>
+              <li><a href="#blog" class="mobile-menu__link">Блог</a></li>
+              <li><a href="#contact" class="mobile-menu__link mobile-menu__link--cta">Связаться</a></li>
+          </ul>
+      </div>
   </div>
 </header>
 
 
-    <main>
+    <main class="main">
       <!-- Loads the specified .html file -->
-      
+      <section class="hero" id="hero">
+  <div class="container hero__container">
+      <div class="hero__content">
+          <div class="hero__badge">Технология нового поколения</div>
+          <h1 class="hero__title">
+              Интеллектуальные боты, которые меняют <span class="text-accent">правила игры</span>
+          </h1>
+          <p class="hero__text">
+              От простых чатов до сложных AI-ассистентов. Передовая цифровая инфраструктура для автоматизации бизнеса и стратегии роста на базе инноваций.
+          </p>
+          <div class="hero__actions">
+              <a href="#contact" class="btn btn--primary">Начать сейчас</a>
+              <a href="#solutions" class="btn btn--secondary">Узнать детали</a>
+          </div>
+          <div class="hero__info">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Платформа уже доступна в Европе</span>
+          </div>
+      </div>
+      <div class="hero__visual" id="hero-canvas-container">
+          </div>
+  </div>
+</section>
+
+<section class="section about" id="about">
+  <div class="container">
+      <div class="section-header text-center">
+          <span class="badge">Как это работает</span>
+          <h2 class="section-title">Пошаговый путь, <span class="text-accent">понятный каждому</span></h2>
+          <p class="section-desc">Мы убрали все сложности. Запуск вашего интеллектуального помощника занимает всего три этапа.</p>
+      </div>
+
+      <div class="steps-grid">
+          <div class="step-card">
+              <div class="step-card__icon">
+                  <i class="fa-solid fa-layer-group"></i>
+              </div>
+              <h3 class="step-card__title">1. Выбор архитектуры</h3>
+              <p class="step-card__text">
+                  Определите цели: от простой автоматизации поддержки до сложных нейросетевых продаж.
+              </p>
+          </div>
+          <div class="step-card">
+              <div class="step-card__icon">
+                  <i class="fa-solid fa-code-branch"></i>
+              </div>
+              <h3 class="step-card__title">2. Интеграция AI</h3>
+              <p class="step-card__text">
+                  Подключение модулей распознавания речи и анализа данных. Легко разобраться без опыта.
+              </p>
+          </div>
+          <div class="step-card">
+              <div class="step-card__icon">
+                  <i class="fa-solid fa-rocket"></i>
+              </div>
+              <h3 class="step-card__title">3. Запуск и масштабирование</h3>
+              <p class="step-card__text">
+                  Ваш бот начинает работать 24/7. Оцените перспективы проекта в реальном времени.
+              </p>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="section solutions" id="solutions">
+  <div class="container">
+      <div class="solutions__wrapper">
+          <div class="solutions__content">
+              <span class="badge">Преимущества</span>
+              <h2 class="section-title">Решения, которые <br>меняют правила игры</h2>
+              <p class="section-desc">
+                  Передовая цифровая инфраструктура позволяет вам сосредоточиться на стратегии, пока алгоритмы берут на себя рутину.
+              </p>
+
+              <ul class="solutions__list">
+                  <li>
+                      <i class="fa-solid fa-check-circle"></i>
+                      <span>Технология для пассивного дохода и автоматизации</span>
+                  </li>
+                  <li>
+                      <i class="fa-solid fa-check-circle"></i>
+                      <span>Мгновенная обработка 10,000+ запросов</span>
+                  </li>
+                  <li>
+                      <i class="fa-solid fa-check-circle"></i>
+                      <span>Безопасность данных уровня Enterprise</span>
+                  </li>
+              </ul>
+              <a href="#contact" class="btn btn--primary mt-4">Узнать детали</a>
+          </div>
+          <div class="solutions__visual">
+              <div class="glass-card">
+                  <div class="glass-card__header">
+                      <i class="fa-solid fa-robot"></i>
+                      <span>AI Status</span>
+                  </div>
+                  <div class="glass-card__body">
+                      <div class="stat-row">
+                          <span>Эффективность</span>
+                          <span class="text-accent">98.5%</span>
+                      </div>
+                      <div class="progress-bar"><div class="progress-fill" style="width: 98%"></div></div>
+                      <div class="stat-row mt-2">
+                          <span>Обработано</span>
+                          <span>14k заявок</span>
+                      </div>
+                       <div class="progress-bar"><div class="progress-fill" style="width: 65%"></div></div>
+                  </div>
+              </div>
+              <img src="img/placeholder.png" alt="Analytics Dashboard" class="solutions__img">
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="section quiz" id="quiz">
+  <div class="container">
+      <div class="quiz__container">
+          <div class="quiz__header">
+              <h2 class="section-title text-center text-white">Оцените перспективы проекта</h2>
+              <p class="text-center text-white-50">Ответьте на 3 вопроса и узнайте, какой тип AI-ассистента вам подходит.</p>
+          </div>
+
+          <div class="quiz__box" id="quiz-box">
+              <div class="quiz__start">
+                  <button class="btn btn--primary" id="start-quiz">Начать тест</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="section innovations" id="innovations">
+  <div class="container">
+      <div class="section-header text-center">
+          <span class="badge">Инновации</span>
+          <h2 class="section-title">Технологии будущего</h2>
+      </div>
+
+      <div class="innovations__grid">
+          <div class="innovation-card">
+              <div class="innovation-card__img">
+                  <img src="img/placeholder.png" alt="NLP Processing">
+              </div>
+              <div class="innovation-card__body">
+                  <h3>NLP Обработка</h3>
+                  <p>Понимание естественного языка позволяет ботам вести диалог как живой человек.</p>
+              </div>
+          </div>
+          <div class="innovation-card">
+              <div class="innovation-card__img">
+                  <img src="img/placeholder.png" alt="Machine Learning">
+              </div>
+              <div class="innovation-card__body">
+                  <h3>Машинное обучение</h3>
+                  <p>Система самообучается на основе диалогов, повышая качество ответов с каждым днем.</p>
+              </div>
+          </div>
+          <div class="innovation-card">
+              <div class="innovation-card__img">
+                  <img src="img/placeholder.png" alt="Cloud Integration">
+              </div>
+              <div class="innovation-card__body">
+                  <h3>Облачные вычисления</h3>
+                  <p>Масштабируемая архитектура выдержит любые нагрузки вашего бизнеса.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="section blog" id="blog">
+  <div class="container">
+      <div class="section-header">
+          <h2 class="section-title">Блог разработки</h2>
+          <a href="#" class="btn btn--secondary">Все статьи <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="blog__grid">
+          <article class="blog-card">
+              <div class="blog-card__image">
+                  <img src="img/placeholder.png" alt="Blog 1">
+                  <span class="blog-card__tag">Тренды 2025</span>
+              </div>
+              <div class="blog-card__content">
+                  <div class="blog-card__date">12 Октября, 2025</div>
+                  <h3 class="blog-card__title">
+                      <a href="#">AI-инструменты для реальных задач: что выбрать?</a>
+                  </h3>
+                  <p class="blog-card__excerpt">
+                      Обзор топовых решений для малого бизнеса. Как сократить расходы на поддержку.
+                  </p>
+                  <a href="#" class="blog-card__link">Читать далее</a>
+              </div>
+          </article>
+
+          <article class="blog-card">
+              <div class="blog-card__image">
+                  <img src="img/placeholder.png" alt="Blog 2">
+                  <span class="blog-card__tag">Кейс</span>
+              </div>
+              <div class="blog-card__content">
+                  <div class="blog-card__date">28 Сентября, 2025</div>
+                  <h3 class="blog-card__title">
+                      <a href="#">Как мы внедрили бота и увеличили продажи на 40%</a>
+                  </h3>
+                  <p class="blog-card__excerpt">
+                      Реальная история успеха нашего клиента из Лондона. Пошаговый разбор.
+                  </p>
+                  <a href="#" class="blog-card__link">Читать далее</a>
+              </div>
+          </article>
+
+          <article class="blog-card">
+              <div class="blog-card__image">
+                  <img src="img/placeholder.png" alt="Blog 3">
+                  <span class="blog-card__tag">Разработка</span>
+              </div>
+              <div class="blog-card__content">
+                  <div class="blog-card__date">15 Сентября, 2025</div>
+                  <h3 class="blog-card__title">
+                      <a href="#">Python или Node.js для написания ботов?</a>
+                  </h3>
+                  <p class="blog-card__excerpt">
+                      Сравниваем технологии для backend-части вашего будущего ассистента.
+                  </p>
+                  <a href="#" class="blog-card__link">Читать далее</a>
+              </div>
+          </article>
+      </div>
+  </div>
+</section>
+<section class="section contact" id="contact">
+  <div class="container">
+      <div class="contact__wrapper">
+          <div class="contact__info">
+              <span class="badge">Контакты</span>
+              <h2 class="section-title">Готовы начать?</h2>
+              <p class="section-desc" style="margin: 0 0 30px 0; text-align: left;">
+                  Свяжитесь с нами для бесплатной консультации. Наша команда ответит в течение 24 часов.
+              </p>
+
+              <ul class="contact__list">
+                  <li>
+                      <div class="contact__icon"><i class="fa-solid fa-envelope"></i></div>
+                      <div>
+                          <span>Email</span>
+                          <a href="mailto:support@node-onix.today">support@node-onix.today</a>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="contact__icon"><i class="fa-solid fa-phone"></i></div>
+                      <div>
+                          <span>Телефон</span>
+                          <a href="tel:+442012345678">+44 20 1234 5678</a>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="contact__icon"><i class="fa-solid fa-location-dot"></i></div>
+                      <div>
+                          <span>Офис</span>
+                          <span>14 Wharf Road, London, UK</span>
+                      </div>
+                  </li>
+              </ul>
+          </div>
+
+          <form class="contact__form" id="contact-form" novalidate>
+              <div class="form-group">
+                  <label for="name">Ваше имя</label>
+                  <input type="text" id="name" name="name" placeholder="Иван Петров" required>
+                  <span class="error-msg">Введите имя</span>
+              </div>
+
+              <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+                  <span class="error-msg">Введите корректный email</span>
+              </div>
+
+              <div class="form-group">
+                  <label for="phone">Телефон</label>
+                  <input type="tel" id="phone" name="phone" placeholder="Только цифры" required>
+                  <span class="error-msg">Введите номер (только цифры)</span>
+              </div>
+
+              <div class="form-group captcha-group">
+                  <label for="captcha">Сколько будет <span id="captcha-question"></span>?</label>
+                  <input type="number" id="captcha" required placeholder="?">
+                  <span class="error-msg">Неверный ответ</span>
+              </div>
+
+              <div class="form-checkbox">
+                  <input type="checkbox" id="consent" required>
+                  <label for="consent">Я согласен с <a href="privacy.html">Политикой конфиденциальности</a></label>
+              </div>
+
+              <button type="submit" class="btn btn--primary btn--block">Отправить заявку</button>
+
+              <div class="form-message success" id="form-success">
+                  <i class="fa-solid fa-check-circle"></i>
+                  <h3>Сообщение отправлено!</h3>
+                  <p>Мы свяжемся с вами в ближайшее время.</p>
+              </div>
+          </form>
+      </div>
+  </div>
+</section>
+
+
     </main>
 
     <footer class="footer">
   <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
-      </a>
-    </p>
+      <div class="footer__grid">
+
+          <div class="footer__col">
+              <a href="#" class="footer__logo">
+                  Zephyr<span class="footer__logo-accent">Vista</span>
+              </a>
+              <p class="footer__desc">
+                  Технологии нового поколения для автоматизации бизнеса.
+                  Экспертная поддержка на всех этапах внедрения AI.
+              </p>
+              <ul class="footer__contacts">
+                  <li>
+                      <i class="fa-solid fa-location-dot"></i>
+                      <span>14 Wharf Road, London, N1 7RW, UK</span>
+                  </li>
+                  <li>
+                      <i class="fa-solid fa-phone"></i>
+                      <a href="tel:+442012345678">+44 20 1234 5678</a>
+                  </li>
+                  <li>
+                      <i class="fa-solid fa-envelope"></i>
+                      <a href="mailto:hello@zephyr-vista.click">hello@zephyr-vista.click</a>
+                  </li>
+              </ul>
+          </div>
+
+          <div class="footer__col">
+              <h3 class="footer__title">Навигация</h3>
+              <ul class="footer__nav">
+                  <li><a href="#" class="footer__link">Главная</a></li>
+                  <li><a href="#solutions" class="footer__link">Решения для бизнеса</a></li>
+                  <li><a href="#innovations" class="footer__link">AI Технологии</a></li>
+                  <li><a href="#blog" class="footer__link">Блог разработки</a></li>
+                  <li><a href="#contact" class="footer__link">Получить консультацию</a></li>
+              </ul>
+          </div>
+
+          <div class="footer__col">
+              <h3 class="footer__title">Правовая информация</h3>
+              <ul class="footer__legal">
+                  <li><a href="privacy.html" class="footer__link-legal">Политика конфиденциальности</a></li>
+                  <li><a href="cookies.html" class="footer__link-legal">Cookie политика</a></li>
+                  <li><a href="terms.html" class="footer__link-legal">Условия использования</a></li>
+                  <li><a href="return.html" class="footer__link-legal">Политика возврата</a></li>
+                  <li><a href="disclaimer.html" class="footer__link-legal">Отказ от ответственности</a></li>
+                  <li><a href="personal-data-policy.html" class="footer__link-legal">Обработка данных</a></li>
+              </ul>
+          </div>
+      </div>
+
+      <div class="footer__bottom">
+          <p>&copy; 2025 Zephyr-Vista. Все права защищены. Платформа уже доступна в Европе.</p>
+      </div>
   </div>
 </footer>
-
+    <div class="cookie-popup" id="cookie-popup">
+      <div class="cookie-content">
+          <p>Этот сайт использует cookies для улучшения работы. Подробнее — в нашей <a href="cookies.html">Cookie политике</a>.</p>
+          <button class="btn btn--primary btn--sm" id="cookie-accept">Принять</button>
+      </div>
+    </div>
 
   </body>
 </html>
