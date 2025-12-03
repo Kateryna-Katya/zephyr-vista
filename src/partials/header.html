@@ -1,19 +1,40 @@
 <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
+  <div class="container header__container">
+      <a href="#" class="header__logo">
+          Zephyr<span class="header__logo-accent">Vista</span>
       </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
-      </ul>
-    </nav>
+
+      <nav class="header__nav">
+          <ul class="header__menu">
+              <li class="header__item"><a href="#" class="header__link">Главная</a></li>
+              <li class="header__item"><a href="#about" class="header__link">О платформе</a></li>
+              <li class="header__item"><a href="#solutions" class="header__link">Решения</a></li>
+              <li class="header__item"><a href="#innovations" class="header__link">Инновации</a></li>
+              <li class="header__item"><a href="#blog" class="header__link">Блог</a></li>
+          </ul>
+      </nav>
+
+      <div class="header__actions">
+          <a href="#contact" class="btn btn--primary header__btn">Связаться</a>
+          <button class="header__burger" aria-label="Открыть меню">
+              <i class="fa-solid fa-bars"></i>
+          </button>
+      </div>
+  </div>
+
+  <div class="mobile-menu">
+      <div class="mobile-menu__content">
+          <button class="mobile-menu__close" aria-label="Закрыть меню">
+              <i class="fa-solid fa-xmark"></i>
+          </button>
+          <ul class="mobile-menu__list">
+              <li><a href="#" class="mobile-menu__link">Главная</a></li>
+              <li><a href="#about" class="mobile-menu__link">О платформе</a></li>
+              <li><a href="#solutions" class="mobile-menu__link">Решения</a></li>
+              <li><a href="#innovations" class="mobile-menu__link">Инновации</a></li>
+              <li><a href="#blog" class="mobile-menu__link">Блог</a></li>
+              <li><a href="#contact" class="mobile-menu__link mobile-menu__link--cta">Связаться</a></li>
+          </ul>
+      </div>
   </div>
 </header>

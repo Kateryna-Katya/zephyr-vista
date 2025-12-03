@@ -1,21 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zephyr-Vista | Разработка интеллектуальных ботов и AI-решений</title>
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%234F46E5'/%3E%3Cpath d='M44 20H20V26L36 44H20V50H44V44L28 26H44V20Z' fill='white'/%3E%3Ccircle cx='20' cy='20' r='4' fill='%232DD4BF'/%3E%3Ccircle cx='44' cy='50' r='4' fill='%232DD4BF'/%3E%3Ccircle cx='44' cy='20' r='3' fill='white' opacity='0.5'/%3E%3Ccircle cx='20' cy='50' r='3' fill='white' opacity='0.5'/%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <load src="./partials/header.html" />
 
-    <main>
+    <main class="main">
       <!-- Loads the specified .html file -->
       <load src="./partials/main.html" />
     </main>
 
     <load src="./partials/footer.html" />
+    <div class="cookie-popup" id="cookie-popup">
+      <div class="cookie-content">
+          <p>Этот сайт использует cookies для улучшения работы. Подробнее — в нашей <a href="cookies.html">Cookie политике</a>.</p>
+          <button class="btn btn--primary btn--sm" id="cookie-accept">Принять</button>
+      </div>
+    </div>
 
     <script type="module" src="./main.js"></script>
   </body>
